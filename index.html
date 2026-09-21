@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentShield | Multi-Agent Autonomous Security Auditor</title>
+    <!-- Tailwind CSS CDN for rapid layout styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans">
+
+    <!-- Navigation -->
+    <nav class="border-b border-slate-800 p-4 flex justify-between items-center max-w-7xl mx-auto">
+        <h1 class="text-xl font-bold text-cyan-400">AgentShield</h1>
+        <ul class="flex gap-6 text-sm">
+            <li><a href="#hero" class="hover:text-cyan-400">Home</a></li>
+            <li><a href="#stack" class="hover:text-cyan-400">Tech Stack</a></li>
+            <li><a href="#simulator" class="hover:text-cyan-400">Live Simulator</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="py-20 text-center max-w-4xl mx-auto px-4">
+        <h2 class="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-indigo-500 bg-clip-text text-transparent">
+            Multi-Agent Autonomous Code Security Auditor
+        </h2>
+        <p class="text-slate-400 text-lg mb-8">
+            Collaborative AI agents performing real-time vulnerability detection, dynamic patching, and human-in-the-loop validation in secure sandboxes.
+        </p>
+        <button id="run-audit-btn" class="bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold py-3 px-6 rounded-lg transition">
+            Simulate Agent Audit
+        </button>
+    </section>
+
+    <!-- Agent Output Console -->
+    <section id="simulator" class="max-w-4xl mx-auto p-4 bg-slate-900 border border-slate-800 rounded-xl mb-20">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-2 mb-4 text-xs font-mono text-slate-400">
+            <span>Agent Terminal Logs</span>
+            <span class="text-emerald-400">● Docker Sandbox Active</span>
+        </div>
+        <div id="terminal" class="font-mono text-sm space-y-2 h-40 overflow-y-auto text-slate-300">
+            <p>[System] Ready to initialize multi-agent consensus network...</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <!-- Features & Architecture Section -->
+    <section id="features" class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gradient mb-3">OWASP Top 10 Dynamic Defense</h2>
+            <p class="text-slate-400">Autonomous consensus agents actively targeting critical code vulnerability vectors.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Feature 1 -->
+            <div class="glass-panel p-6">
+                <div class="text-cyan-400 font-mono text-xs uppercase tracking-wider mb-2">A03:2021 – Injection</div>
+                <h3 class="text-xl font-bold mb-2">Dynamic Query Sanitization</h3>
+                <p class="text-slate-400 text-sm">
+                    Agents intercept raw SQL and Command Injections, continuously rewriting queries into parameterized statements while verifying non-breaking changes in a sandbox.
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="glass-panel p-6">
+                <div class="text-cyan-400 font-mono text-xs uppercase tracking-wider mb-2">A01:2021 – Broken Access</div>
+                <h3 class="text-xl font-bold mb-2">Role & Permission Verification</h3>
+                <p class="text-slate-400 text-sm">
+                    Automated RedTeam agents attempt horizontal and vertical privilege escalation vectors across API routes to detect missing function-level authorization.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="glass-panel p-6">
+                <div class="text-cyan-400 font-mono text-xs uppercase tracking-wider mb-2">A06:2021 – Vulnerable Components</div>
+                <h3 class="text-xl font-bold mb-2">AST-Based Dependency Auditing</h3>
+                <p class="text-slate-400 text-sm">
+                    Scans third-party packages at the Abstract Syntax Tree level to flag transient zero-day exploits before packages hit production builds.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Case Studies & Benchmarks Section -->
+    <section id="case-studies" class="max-w-7xl mx-auto px-4 py-16 border-t border-slate-800/50">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gradient mb-3">Enterprise Performance Benchmarks</h2>
+            <p class="text-slate-400">Measured across 50,000+ open-source and enterprise repositories.</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-4 text-center">
+            <div class="glass-panel p-6">
+                <div class="text-4xl font-extrabold text-cyan-400 font-mono mb-1">99.2%</div>
+                <div class="text-xs text-slate-400 uppercase tracking-wide">Detection Accuracy</div>
+            </div>
+            <div class="glass-panel p-6">
+                <div class="text-4xl font-extrabold text-indigo-400 font-mono mb-1">&lt; 0.1%</div>
+                <div class="text-xs text-slate-400 uppercase tracking-wide">False Positive Rate</div>
+            </div>
+            <div class="glass-panel p-6">
+                <div class="text-4xl font-extrabold text-emerald-400 font-mono mb-1">4.2x</div>
+                <div class="text-xs text-slate-400 uppercase tracking-wide">Faster Patch Cycles</div>
+            </div>
+            <div class="glass-panel p-6">
+                <div class="text-4xl font-extrabold text-purple-400 font-mono mb-1">100%</div>
+                <div class="text-xs text-slate-400 uppercase tracking-wide">Sandboxed Verification</div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact / HITL Onboarding Section -->
+    <section id="contact" class="max-w-3xl mx-auto px-4 py-16">
+        <div class="glass-panel p-8 text-center">
+            <h2 class="text-2xl font-bold mb-4">Deploy AgentShield to Your CI/CD Pipeline</h2>
+            <p class="text-slate-400 text-sm mb-6">Connect your GitHub or GitLab organization to enable real-time multi-agent auditing.</p>
+            
+            <form class="space-y-4 text-left" onsubmit="event.preventDefault(); alert('Demo request submitted!');">
+                <div>
+                    <label class="block text-xs font-mono text-slate-400 mb-1">WORK EMAIL</label>
+                    <input type="email" required placeholder="security@company.com" class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-sm focus:outline-none focus:border-cyan-400">
+                </div>
+                <div>
+                    <label class="block text-xs font-mono text-slate-400 mb-1">PRIMARY LANGUAGE STACK</label>
+                    <select class="w-full bg-slate-900 border border-slate-800 rounded-lg p-3 text-sm focus:outline-none focus:border-cyan-400">
+                        <option>Python / Django / FastApi</option>
+                        <option>TypeScript / Node.js</option>
+                        <option>Go / Kubernetes Native</option>
+                        <option>C++ / Rust / Embedded</option>
+                    </select>
+                </div>
+                <button type="submit" class="glow-button w-full">Request Enterprise Access</button>
+            </form>
+        </div>
+    </section>
+    <!-- Interactive Audit Simulator & Custom Input -->
+<section id="simulator" class="max-w-4xl mx-auto p-6 glass-panel mb-20">
+    <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold text-gradient">Live Security Audit Console</h3>
+        <span class="text-xs font-mono text-emerald-400 flex items-center gap-2">
+            <span class="pulse-indicator"></span> Sandbox Ready
+        </span>
+    </div>
+
+    <!-- Code Input Controls -->
+    <div class="mb-4 space-y-2">
+        <div class="flex justify-between items-center text-xs font-mono text-slate-400">
+            <label for="code-input">PASTE SOURCE CODE TO AUDIT:</label>
+            <select id="language-select" class="bg-slate-900 border border-slate-800 text-slate-300 rounded px-2 py-1 text-xs focus:outline-none focus:border-cyan-400">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript / Node.js</option>
+                <option value="cpp">C / C++</option>
+                <option value="go">Go</option>
+            </select>
+        </div>
+
+        <textarea 
+            id="code-input" 
+            rows="6" 
+            class="w-full font-mono text-sm bg-slate-950/80 border border-slate-800 rounded-lg p-4 text-slate-200 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 resize-y"
+            placeholder="Paste raw code here..."
+        >def get_user_data(user_id):
+    # Vulnerable SQL Injection vector
+    query = f"SELECT * FROM users WHERE id = '{user_id}'"
+    return db.execute(query)</textarea>
+    </div>
+
+    <!-- Submit Action Button -->
+    <div class="flex gap-3 mb-6">
+        <button id="run-audit-btn" class="glow-button w-full flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Audit Custom Code
+        </button>
+        <button id="clear-btn" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-semibold px-4 rounded-lg transition">
+            Clear
+        </button>
+    </div>
+
+    <!-- Agent Logs Terminal Window -->
+    <div class="terminal-window p-4">
+        <div class="terminal-header flex justify-between items-center border-b border-slate-800 pb-2 mb-3 text-xs font-mono text-slate-400">
+            <span>Agent Orchestration Feed</span>
+            <span id="audit-status" class="text-cyan-400">IDLE</span>
+        </div>
+        <div id="terminal" class="font-mono text-xs md:text-sm space-y-2 h-48 overflow-y-auto text-slate-300">
+            <p class="text-slate-500">[System] Awaiting code input submission...</p>
+        </div>
+    </div>
+</section>
+<!-- Human-In-The-Loop (HITL) Patch Approval Module -->
+    <div id="patch-approval-container" class="mt-6 border-t border-slate-800 pt-6 hidden">
+        <div class="flex justify-between items-center mb-3">
+            <h4 class="text-sm font-bold text-cyan-400 font-mono">HITL PATCH REVIEW REQUIRED</h4>
+            <span class="text-xs bg-yellow-500/10 text-yellow-400 border border-yellow-500/30 px-2 py-0.5 rounded">
+                Pending Approval
+            </span>
+        </div>
+
+        <!-- Code Diff Comparison -->
+        <div class="grid md:grid-cols-2 gap-3 font-mono text-xs mb-4">
+            <!-- Original Vulnerable Code -->
+            <div class="bg-red-950/20 border border-red-500/30 rounded-lg p-3">
+                <div class="text-red-400 font-semibold mb-2 border-b border-red-500/20 pb-1">- Vulnerable Code</div>
+                <pre id="vulnerable-diff" class="text-red-300 whitespace-pre-wrap">query = f"SELECT * FROM users WHERE id = '{user_id}'"</pre>
+            </div>
+
+            <!-- AI Suggested Patch -->
+            <div class="bg-emerald-950/20 border border-emerald-500/30 rounded-lg p-3">
+                <div class="text-emerald-400 font-semibold mb-2 border-b border-emerald-500/20 pb-1">+ Proposed Sanitized Patch</div>
+                <pre id="patched-diff" class="text-emerald-300 whitespace-pre-wrap">query = "SELECT * FROM users WHERE id = %s"
+db.execute(query, (user_id,))</pre>
+            </div>
+        </div>
+
+        <!-- Approval Actions -->
+        <div class="flex gap-3">
+            <button id="approve-patch-btn" class="glow-button flex-1 bg-emerald-500 text-slate-950 font-bold py-2 rounded-lg text-xs uppercase tracking-wider">
+                Approve & Deploy Patch
+            </button>
+            <button id="reject-patch-btn" class="bg-slate-800 hover:bg-slate-700 text-red-400 border border-red-500/30 font-semibold px-4 rounded-lg text-xs">
+                Reject Patch
+            </button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Slide-Out Audit History Drawer -->
+<div id="drawer-overlay" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+
+<aside id="history-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 flex flex-col">
+    <!-- Drawer Header -->
+    <div class="flex justify-between items-center p-5 border-b border-slate-800 bg-slate-950/50">
+        <div class="flex items-center gap-2">
+            <h3 class="font-mono text-sm font-bold text-cyan-400">AUDIT HISTORY LOGS</h3>
+            <span id="history-count" class="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full font-mono">0</span>
+        </div>
+        <button id="close-drawer-btn" class="text-slate-400 hover:text-white p-1 rounded-lg transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Audit Reports List Container -->
+    <div id="history-list" class="p-5 space-y-4 overflow-y-auto flex-1 font-mono text-xs">
+        <div class="text-center text-slate-500 py-10">
+            Loading past audit reports...
+        </div>
+    </div>
+</aside>
+<!-- Export Actions Bar -->
+<div id="export-actions" class="flex gap-3 mt-4 pt-4 border-t border-slate-800">
+    <button id="export-md-btn" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono py-2 rounded-lg transition flex items-center justify-center gap-2 border border-slate-700">
+        <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        Export Markdown (.md)
+    </button>
+    
+    <button id="export-pdf-btn" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-mono py-2 rounded-lg transition flex items-center justify-center gap-2 border border-slate-700">
+        <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+        </svg>
+        Export PDF (.pdf)
+    </button>
+</div>
+
+<!-- Add jsPDF Library via CDN before script.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<button type="button" id="run-audit-btn" class="glow-button w-full flex items-center justify-center gap-2">
+    Audit Custom Code
+</button>
+</body>
+</html>

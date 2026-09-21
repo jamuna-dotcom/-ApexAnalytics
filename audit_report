@@ -1,0 +1,22 @@
+-- Create audit_reports table
+CREATE TABLE audit_reports (
+    id UUID PRIMARY KEY DEFAULT gen_random_policy_id(),
+    user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+    language TEXT NOT NULL,
+    vulnerable_code TEXT NOT NULL,
+    patched_code TEXT,
+    vulnerability_details TEXT,
+    status TEXT DEFAULT 'pending',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Enable Row Level Security (RLS) so users only see their own reports
+ALTER TABLE audit_reports ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users can view their own reports" 
+ON audit_reports FOR SELECT 
+USING (auth.uid() = user_id);
+
+CREATE POLICY "Users can insert their own reports" 
+ON audit_reports FOR INSERT 
+WITH CHECK (auth.uid() = user_id);

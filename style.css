@@ -1,0 +1,235 @@
+/* ==========================================================================
+   AgentShield - Futuristic Glassmorphic Cybersecurity Theme
+   ========================================================================== */
+
+/* --- Custom Properties & Theme Variables --- */
+:root {
+  --bg-dark: #07090e;
+  --bg-card: rgba(15, 23, 42, 0.65);
+  --bg-card-hover: rgba(30, 41, 59, 0.75);
+  
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(0, 242, 254, 0.3);
+
+  --accent-cyan: #00f2fe;
+  --accent-blue: #4facfe;
+  --accent-purple: #7f00ff;
+  --accent-emerald: #10b981;
+  --accent-danger: #ef4444;
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
+}
+
+/* --- Base Body & Background Setup --- */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Cybernetic Subtle Grid Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Ambient Radial Glows in Background */
+body::after {
+  content: "";
+  position: fixed;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 242, 254, 0.08) 0%, rgba(127, 0, 255, 0.05) 50%, transparent 80%);
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(60px);
+}
+
+/* --- Glassmorphism Core Classes --- */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--border-glow);
+  box-shadow: 0 8px 32px 0 rgba(0, 242, 254, 0.15);
+}
+
+/* --- Glowing Elements & Gradient Text --- */
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-button {
+  position: relative;
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  color: #07090e;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.7);
+  transform: translateY(-2px);
+}
+
+.glow-button:active {
+  transform: translateY(0);
+}
+
+/* --- Cyber Terminal & Code Styling --- */
+.terminal-window {
+  font-family: var(--font-mono);
+  background: rgba(3, 7, 18, 0.85);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+  border-radius: 0.75rem;
+}
+
+.terminal-header {
+  background: rgba(15, 23, 42, 0.8);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.pulse-indicator {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-emerald);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* --- Custom Cyber Scrollbars --- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(7, 9, 14, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 242, 254, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 242, 254, 0.5);
+}
+
+/* --- Navigation Effects --- */
+nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+nav a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent-cyan);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}/* --- Drawer Active States --- */
+#history-drawer.open {
+  transform: translateX(0);
+}
+
+#drawer-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --- Audit Log History Card Styling --- */
+.history-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--border-glass);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+
+.history-card:hover {
+  border-color: var(--border-glow);
+  box-shadow: 0 4px 12px rgba(0, 242, 254, 0.1);
+}
+.glow-button {
+  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  color: #07090e;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.7);
+  transform: translateY(-2px);
+}
