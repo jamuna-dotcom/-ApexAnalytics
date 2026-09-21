@@ -8,3 +8,5 @@ plotly>=5.20.0
 pandas>=2.0.0
 python-dotenv>=1.0.0
 requests>=2.31.0
+PyGithub>=2.1.1
+reportlab>=4.0.0
